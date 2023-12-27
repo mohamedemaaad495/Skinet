@@ -1,0 +1,11 @@
+D:\Demo\Skinet\Core\bin\Debug\net7.0\Core.deps.json
+D:\Demo\Skinet\Core\bin\Debug\net7.0\Core.dll
+D:\Demo\Skinet\Core\bin\Debug\net7.0\Core.pdb
+D:\Demo\Skinet\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demo\Skinet\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+D:\Demo\Skinet\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+D:\Demo\Skinet\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+D:\Demo\Skinet\Core\obj\Debug\net7.0\Core.dll
+D:\Demo\Skinet\Core\obj\Debug\net7.0\refint\Core.dll
+D:\Demo\Skinet\Core\obj\Debug\net7.0\Core.pdb
+D:\Demo\Skinet\Core\obj\Debug\net7.0\ref\Core.dll
