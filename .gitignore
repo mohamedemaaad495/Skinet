@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Api/obj/Debug/net7.0/Api.AssemblyInfo.cs
+/Api/obj/Debug/net7.0/Api.AssemblyInfoInputs.cache
