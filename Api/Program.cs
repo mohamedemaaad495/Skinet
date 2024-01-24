@@ -16,7 +16,9 @@ builder.Services.AddDbContext<StoreContext>(opt=>{
 });
 //Register The Product Services
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+//Register The AutoMapper
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,6 +28,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+//Register The MiddleWare Of The Static Files(images)
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();

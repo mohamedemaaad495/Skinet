@@ -71,3 +71,7 @@ D:\Demo\Skinet\Api\bin\Debug\net7.0\Core.dll
 D:\Demo\Skinet\Api\bin\Debug\net7.0\Infrastructure.dll
 D:\Demo\Skinet\Api\bin\Debug\net7.0\Infrastructure.pdb
 D:\Demo\Skinet\Api\bin\Debug\net7.0\Core.pdb
+D:\Demo\Skinet\Api\obj\Debug\net7.0\Api.sourcelink.json
+D:\Demo\Skinet\Api\bin\Debug\net7.0\AutoMapper.dll
+D:\Demo\Skinet\Api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Demo\Skinet\Api\bin\Debug\net7.0\Api.staticwebassets.runtime.json
