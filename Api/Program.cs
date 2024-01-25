@@ -1,4 +1,5 @@
-using Core.Interfaces;
+using Api.Extensions;
+using Api.MiddleWare;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,26 +8,19 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-//Register The StoreDBContext
-builder.Services.AddDbContext<StoreContext>(opt=>{
-    opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-//Register The Product Services
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-//Register The AutoMapper
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddApplicatioservices(builder.Configuration);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseMiddleware<ExceptionMiddleWare>();   //Register The MiddleWare Of The Custom Exception
+app.UseStatusCodePagesWithReExecute("/errors/{0}"); //Register The ErrorController in The MiddleWare
+
+app.UseSwagger();
+app.UseSwaggerUI(options =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+    options.RoutePrefix = string.Empty;
+});
 
 
 //Register The MiddleWare Of The Static Files(images)
