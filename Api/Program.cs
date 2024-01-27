@@ -25,8 +25,13 @@ app.UseSwaggerUI(options =>
 
 //Register The MiddleWare Of The Static Files(images)
 app.UseStaticFiles();
+
 app.UseHttpsRedirection();
+
+app.UseCors("CorsPolicy");
+
 app.UseAuthorization();
+
 app.MapControllers();
 
 using var scope=app.Services.CreateScope();
